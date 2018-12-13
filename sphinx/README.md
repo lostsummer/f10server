@@ -25,3 +25,20 @@ yum install libxml2-devel expat-devel
 ## 安装流程
 
 详见： http://www.cnblogs.com/mingaixin/p/5013131.html
+
+## 运行
+
+sphinx.conf 为测试用的典型配置，应位于 /usr/local/coreseek4/etc/ 中
+
+建立索引
+
+```
+cd /usr/local/coreseek4
+bin/indexer -c etc/sphinx.conf test1
+```
+
+启动搜索服务
+
+```
+bin/searchd -c etc/sphinx.conf
+```
