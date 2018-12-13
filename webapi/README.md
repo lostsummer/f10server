@@ -29,7 +29,12 @@ pip install flask
 
 ```
 uwsgi --ini etc/uwsgi/uwsgi.ini &
-nginx /emoney/f10/webapi/etc/nginx/nginx.conf
+nginx -c /emoney/f10/webapi/etc/nginx/nginx.conf
 ```
 
 配置文件监听 5555 端口，可通过 etc/nginx/nginx.conf 修改
+
+# Todo
+
+- 整体启动脚本
+- supervisor 或 systemd 监管服务
